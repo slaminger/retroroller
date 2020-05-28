@@ -1,14 +1,12 @@
 # Maintainer: npaladin2000
 
 pkgname=dr4st1c-install-go2
-pkgver=0.99r1.e4c6359
+pkgver=1.0.0
 pkgrel=1
 pkgdesc='A DS emulator installer for Linux'
 arch=(x86_64 aarch64)
 url=https://www.drastic-ds.com/
 license=(GPL2)
-provides=(ds-install)
-conflicts=(ds-install)
 depends=(
   glibc
   sdl2
