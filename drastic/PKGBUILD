@@ -1,0 +1,34 @@
+# Maintainer: npaladin2000
+
+pkgname=dr4st1c-install-go2
+pkgver=0.99r1.e4c6359
+pkgrel=1
+pkgdesc='A DS emulator installer for Linux'
+arch=(x86_64 aarch64)
+url=https://www.drastic-ds.com/
+license=(GPL2)
+provides=(ds-install)
+conflicts=(ds-install)
+depends=(
+  glibc
+  sdl2
+  zlib
+  libgo2
+)
+makedepends=(
+  cmake
+  git
+  libzip
+  python
+)
+source=(
+  Install_Dr4st1c.sh
+  drastic.cfg
+  drastic.cf2
+)
+
+package() {
+    install -Dm 755 install_Dr4st1c.sh -t "$pkgdir"/roms/sh
+    install -Dm 755 drastic.cfg -t "$pkgdir"~/drastic/config
+    install -Dm 755 drastic.cf2 -t "$pkgdir"~/drastic/config
+}
