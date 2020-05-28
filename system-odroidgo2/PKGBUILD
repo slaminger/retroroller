@@ -75,11 +75,6 @@ package() {
   install -Dm 755 zz_RestoreConfig.sh -t "$pkgdir"/roms/sh
   install -Dm 755 zz_ResetConfig.sh -t "$pkgdir"/roms/sh
   
-  install -Dm 755 install_Dr4st1c.sh -t "$pkgdir"/roms/sh
-  
-  install -Dm 755 drastic.cfg -t "$pkgdir"~/drastic/config
-  install -Dm 755 drastic.cf2 -t "$pkgdir"~/drastic/config
-
   install -Dm 755 10-wheel -t "$pkgdir"/etc/sudoers.d
   chmod 750 "$pkgdir"/etc/sudoers.d
   chmod 440 "$pkgdir"/etc/sudoers.d/10-wheel
