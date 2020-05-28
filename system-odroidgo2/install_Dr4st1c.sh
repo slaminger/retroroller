@@ -5,5 +5,4 @@ LINKDEST="~/drastic.tar.gz"
 wget -O $LINKDEST $LINK
 tar xvf $LINKDEST 
 rm $LINKDEST
-mkdir ~/drastic/config
-cp ~/.ds_configs/drastic.* /~/drastic/config/
+
