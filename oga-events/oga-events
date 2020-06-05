@@ -45,7 +45,7 @@ async def handle_event(device):
                 runcmd("systemctl suspend || true")
         elif HOTKEY in keys:
             if event.code == e.BTN_TRIGGER_HAPPY1:
-                runcmd("kill -9 retrorun32")
+                runcmd("killall emulationstation")
             if event.code == e.BTN_DPAD_LEFT:
                 runcmd("amixer -q sset Playback 1%-")
             elif event.code == VOL_UP:
