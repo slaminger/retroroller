@@ -24,6 +24,7 @@ BRIGHT_UP = e.BTN_DPAD_UP
 BRIGHT_DOWN = e.BTN_DPAD_DOWN
 PERF_NORM = e.BTN_TL
 PERF_MAX = e.BTN_TR
+KILL = e.BTN_TRIGGER_HAPPY1
 
 
 async def handle_event(device):
@@ -43,6 +44,8 @@ async def handle_event(device):
             else:
                 runcmd("systemctl suspend || true")
         elif HOTKEY in keys:
+            if event.code == e.BTN_TRIGGER_HAPPY1:
+                runcmd("amixer -q sset Playback 1%-")
             if event.code == e.BTN_DPAD_LEFT:
                 runcmd("amixer -q sset Playback 1%-")
             elif event.code == VOL_UP:
