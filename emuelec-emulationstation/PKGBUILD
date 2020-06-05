@@ -6,7 +6,7 @@ pkgver=3523.91d13727
 pkgrel=2
 pkgdesc="Emulation Station is a flexible emulator front-end supporting keyboardless navigation and custom system themes. EmuELEC edition."
 arch=(any)
-url="https://github.com/EmuELEC/emuelec-emulationstation"
+url="https://github.com/slaminger/emuelec-emulationstation"
 license=('MIT')
 depends=(
   vlc
